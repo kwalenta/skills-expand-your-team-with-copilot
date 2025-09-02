@@ -1,0 +1,169 @@
+name: 🎨 UI/UX Improvement Request
+description: Request improvements to the user interface, styling, or user experience
+title: "[UI/UX] "
+labels: ["ui/ux", "enhancement", "needs-review"]
+assignees:
+  - copilot
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting a UI/UX improvement! This template will help provide all the details needed for implementation.
+        
+        **Please describe the visual or interaction changes you'd like to see.**
+
+  - type: dropdown
+    id: improvement-type
+    attributes:
+      label: Type of UI/UX Improvement
+      description: What type of improvement are you requesting?
+      options:
+        - Visual styling (colors, fonts, spacing)
+        - Layout and positioning
+        - User interaction (buttons, forms, navigation)
+        - Responsive design (mobile/tablet compatibility)
+        - Accessibility improvements
+        - Dark mode / Theme changes
+        - Icons and imagery
+        - Animation or transitions
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-state
+    attributes:
+      label: Current State Description
+      description: Describe how the interface currently looks or behaves
+      placeholder: "Example: The activities are displayed in a plain list format with basic blue styling"
+    validations:
+      required: true
+
+  - type: textarea
+    id: desired-state
+    attributes:
+      label: Desired State Description
+      description: Describe exactly how you want the interface to look or behave
+      placeholder: "Example: Activities should be displayed in colorful cards with rounded corners, category icons, and hover effects"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: affected-pages
+    attributes:
+      label: Which page(s) should be updated?
+      description: Select the primary page(s) affected by this change
+      options:
+        - Main activities page (index.html)
+        - Login modal/form
+        - Registration modal/form
+        - All pages (global styling)
+        - Header/navigation area
+        - Footer area
+        - Activity cards/listings
+        - Filter sidebar
+        - Not sure
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: specific-elements
+    attributes:
+      label: Specific Elements to Update
+      description: Check all UI elements that need changes
+      options:
+        - label: Colors and color scheme
+        - label: Typography (fonts, sizes, weights)
+        - label: Buttons and interactive elements
+        - label: Forms and input fields
+        - label: Cards and containers
+        - label: Icons and imagery
+        - label: Spacing and layout
+        - label: Navigation elements
+        - label: Filter controls
+        - label: Animations or transitions
+
+  - type: textarea
+    id: visual-requirements
+    attributes:
+      label: Visual Requirements and Specifications
+      description: Provide specific details about colors, fonts, sizes, or other visual elements
+      placeholder: |
+        Example:
+        - Use school colors: lime green (#32CD32) and white (#FFFFFF)
+        - Buttons should have rounded corners (8px border-radius)
+        - Font should be modern and readable (consider Inter or Roboto)
+        - Cards should have subtle shadows for depth
+        - Activity category should be color-coded (Sports=red, Arts=purple, etc.)
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: Define specific, visual criteria that must be met
+      placeholder: |
+        Example:
+        - [ ] Activity cards display with lime green accents
+        - [ ] Hover effects are smooth and responsive
+        - [ ] Text is easily readable on all backgrounds
+        - [ ] Design works on mobile phones (320px width)
+        - [ ] All buttons maintain consistent styling
+        - [ ] School mascot/logo is prominently displayed
+    validations:
+      required: true
+
+  - type: dropdown
+    id: device-compatibility
+    attributes:
+      label: Device Compatibility Requirements
+      description: Which devices must this work on?
+      options:
+        - Desktop only
+        - Mobile only  
+        - Desktop and mobile
+        - Desktop, tablet, and mobile
+        - All screen sizes
+    validations:
+      required: true
+
+  - type: textarea
+    id: design-inspiration
+    attributes:
+      label: Design Inspiration or Examples
+      description: Share links, images, or descriptions of designs you like
+      placeholder: "Include URLs to websites with similar designs, attach mockup images, or describe the look you're going for"
+
+  - type: textarea
+    id: accessibility-requirements
+    attributes:
+      label: Accessibility Requirements
+      description: Any specific accessibility needs to consider?
+      placeholder: "Example: Ensure sufficient color contrast, support for screen readers, keyboard navigation"
+
+  - type: dropdown
+    id: browser-support
+    attributes:
+      label: Browser Support Requirements
+      description: Which browsers should this work in?
+      options:
+        - Modern browsers only (Chrome, Firefox, Safari, Edge)
+        - Include older browsers (Internet Explorer)
+        - Chrome/Chromium only
+        - All major browsers
+        - Not sure
+    validations:
+      required: true
+
+  - type: textarea
+    id: technical-constraints
+    attributes:
+      label: Technical Constraints
+      description: Any technical limitations or requirements?
+      placeholder: "Example: Must not affect page load time, should use existing CSS framework, avoid external dependencies"
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any other information about the desired UI/UX changes
+      placeholder: "Include any brand guidelines, user feedback, or other context that influences the design decisions"

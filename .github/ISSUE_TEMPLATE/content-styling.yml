@@ -1,0 +1,181 @@
+name: 📝 Content & Styling Update
+description: Request updates to content, text, images, colors, or styling to match school branding
+title: "[CONTENT] "
+labels: ["content", "styling", "needs-review"]
+assignees:
+  - copilot
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for requesting a content or styling update! This template will help ensure the changes match your school's branding and requirements.
+        
+        **Please provide specific details about the content or styling changes needed.**
+
+  - type: dropdown
+    id: update-type
+    attributes:
+      label: Type of Update Needed
+      description: What type of content or styling update are you requesting?
+      options:
+        - School branding (colors, logos, mascots)
+        - Text content (headings, descriptions, labels)
+        - Images and graphics
+        - Color scheme changes
+        - Typography (fonts and text styling)
+        - Activity information updates
+        - Contact information
+        - Footer content
+        - Overall theme/styling
+        - Multiple types (specify in description)
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-content
+    attributes:
+      label: Current Content/Styling
+      description: Describe what currently exists that needs to be changed
+      placeholder: "Example: The website uses blue colors throughout, but our school colors are lime green and white"
+    validations:
+      required: true
+
+  - type: textarea
+    id: desired-content
+    attributes:
+      label: Desired Content/Styling
+      description: Describe exactly what you want the content or styling to be
+      placeholder: "Example: Change all blue colors to lime green (#32CD32), add school mascot from octodex.github.com, update header to say 'Mergington Panthers Activities'"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: school-branding
+    attributes:
+      label: School Branding Requirements
+      description: Select all branding elements that need to be updated
+      options:
+        - label: School colors (specify colors below)
+        - label: School mascot/logo
+        - label: School name in headers/titles
+        - label: School motto or tagline
+        - label: Contact information
+        - label: Social media links
+        - label: School website links
+
+  - type: textarea
+    id: brand-specifications
+    attributes:
+      label: Brand Specifications
+      description: Provide specific details about school colors, mascot, fonts, etc.
+      placeholder: |
+        Example:
+        - Primary Color: Lime Green (#32CD32)
+        - Secondary Color: White (#FFFFFF)
+        - Accent Color: Dark Green (#228B22)
+        - Mascot: Panthers
+        - Mascot Image: Use "Professortocat" from https://octodex.github.com/
+        - School Name: Mergington High School
+        - Motto: "Excellence in Education"
+
+  - type: textarea
+    id: content-changes
+    attributes:
+      label: Specific Content Changes
+      description: List specific text, headings, or content that needs to be updated
+      placeholder: |
+        Example:
+        - Change header from "High School Activities" to "Mergington Panthers Activities"
+        - Update footer to include "Go Panthers!" 
+        - Add school address: "123 Education Street, Learning City, LC 12345"
+        - Change "Activities" to "Extracurricular Programs"
+
+  - type: dropdown
+    id: affected-locations
+    attributes:
+      label: Where should these changes appear?
+      description: Select all locations where the changes should be applied
+      options:
+        - Header/navigation area
+        - Main page content
+        - Footer area
+        - Activity cards/listings
+        - Modal windows (login, registration)
+        - All pages (site-wide changes)
+        - Specific page (describe in additional context)
+    validations:
+      required: true
+
+  - type: textarea
+    id: image-requirements
+    attributes:
+      label: Image and Graphics Requirements
+      description: Specify any image changes, mascot additions, or graphic requirements
+      placeholder: |
+        Example:
+        - Add school mascot image to header (use Octocat from octodex.github.com)
+        - Replace any generic icons with school-themed ones
+        - Add background pattern with school colors
+        - Include school logo in footer
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: Define specific criteria that must be met for the update to be complete
+      placeholder: |
+        Example:
+        - [ ] All blue colors changed to lime green (#32CD32)
+        - [ ] School mascot appears in header
+        - [ ] Header text reads "Mergington Panthers Activities"
+        - [ ] Footer includes school contact information
+        - [ ] Colors are consistent across all pages
+        - [ ] Text remains readable on new color scheme
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority Level
+      description: How important is this content update?
+      options:
+        - Low - Can be done when convenient
+        - Medium - Should be done soon
+        - High - Important for school branding
+        - Urgent - Needed for upcoming event/deadline
+    validations:
+      required: true
+
+  - type: textarea
+    id: design-guidelines
+    attributes:
+      label: Design Guidelines or References
+      description: Any existing brand guidelines, style guides, or reference materials?
+      placeholder: "Include links to school brand guidelines, existing websites, or other materials that show the desired look"
+
+  - type: textarea
+    id: accessibility-considerations
+    attributes:
+      label: Accessibility Considerations
+      description: Any accessibility requirements for colors, fonts, or content?
+      placeholder: "Example: Ensure color contrast meets accessibility standards, use alt text for images"
+
+  - type: dropdown
+    id: timeline
+    attributes:
+      label: Timeline Requirements
+      description: When do you need these changes completed?
+      options:
+        - No specific timeline
+        - Within a week
+        - Before upcoming event (specify in additional context)
+        - Before school year starts
+        - ASAP - urgent need
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any other information about the content or styling requirements
+      placeholder: "Include any special events, deadlines, existing brand materials, or other context that influences these changes"

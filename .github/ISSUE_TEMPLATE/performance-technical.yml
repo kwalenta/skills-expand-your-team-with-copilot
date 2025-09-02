@@ -1,0 +1,204 @@
+name: ⚡ Performance & Technical Improvement
+description: Request performance optimization, code quality improvements, or technical enhancements
+title: "[TECH] "
+labels: ["performance", "technical", "improvement"]
+assignees:
+  - copilot
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting a technical improvement! This template will help identify and implement performance or technical enhancements.
+        
+        **Please describe the technical issue or improvement opportunity.**
+
+  - type: dropdown
+    id: improvement-type
+    attributes:
+      label: Type of Technical Improvement
+      description: What type of technical improvement are you requesting?
+      options:
+        - Performance optimization (page load speed, responsiveness)
+        - Code quality and organization
+        - Security improvements
+        - Database optimization
+        - API performance and reliability
+        - Browser compatibility
+        - Mobile performance
+        - Error handling and logging
+        - Code documentation
+        - Development workflow improvements
+        - Other technical improvement
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-issue
+    attributes:
+      label: Current Issue or Problem
+      description: Describe the current technical issue or area for improvement
+      placeholder: "Example: The activities page loads slowly when there are many activities, taking 5+ seconds to display all cards"
+    validations:
+      required: true
+
+  - type: textarea
+    id: desired-outcome
+    attributes:
+      label: Desired Outcome
+      description: What should the improved performance or behavior look like?
+      placeholder: "Example: Activities page should load in under 2 seconds, even with 100+ activities"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: affected-component
+    attributes:
+      label: Which component is affected?
+      description: Select the primary technical component that needs improvement
+      options:
+        - Frontend (HTML/CSS/JavaScript)
+        - Backend API (Python/FastAPI)
+        - Database operations
+        - Static file serving
+        - User authentication
+        - Activity data management
+        - Search and filtering logic
+        - Overall application architecture
+        - Development/build process
+        - Not sure
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: performance-metrics
+    attributes:
+      label: Performance Areas to Address
+      description: Select all performance areas that need improvement
+      options:
+        - label: Page load time
+        - label: User interaction responsiveness
+        - label: Mobile device performance
+        - label: Large dataset handling
+        - label: Memory usage optimization
+        - label: Network request efficiency
+        - label: Database query performance
+        - label: JavaScript execution speed
+        - label: CSS rendering performance
+
+  - type: textarea
+    id: current-metrics
+    attributes:
+      label: Current Performance Metrics (if known)
+      description: Any specific measurements of current performance
+      placeholder: |
+        Example:
+        - Page load time: 5.2 seconds
+        - Time to interactive: 6.8 seconds
+        - JavaScript bundle size: 250KB
+        - API response time: 800ms
+        - Lighthouse score: 65/100
+
+  - type: textarea
+    id: target-metrics
+    attributes:
+      label: Target Performance Metrics
+      description: What performance targets should be achieved?
+      placeholder: |
+        Example:
+        - Page load time: <2 seconds
+        - Time to interactive: <3 seconds
+        - JavaScript bundle size: <150KB
+        - API response time: <300ms
+        - Lighthouse score: >85/100
+
+  - type: textarea
+    id: technical-suggestions
+    attributes:
+      label: Technical Suggestions or Approaches
+      description: Any specific technical approaches, libraries, or solutions you're aware of?
+      placeholder: |
+        Example:
+        - Implement lazy loading for activity cards
+        - Use pagination instead of loading all activities at once
+        - Optimize CSS by removing unused styles
+        - Add caching for API responses
+        - Minimize JavaScript bundle size
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: Define specific, measurable criteria for completion
+      placeholder: |
+        Example:
+        - [ ] Page load time reduced to under 2 seconds
+        - [ ] All interactions respond within 100ms
+        - [ ] Mobile performance matches desktop
+        - [ ] No console errors or warnings
+        - [ ] Lighthouse performance score above 85
+        - [ ] Works reliably with 100+ activities
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority Level
+      description: How important is this technical improvement?
+      options:
+        - Low - Minor optimization
+        - Medium - Noticeable improvement needed
+        - High - Significant performance impact
+        - Critical - Blocking user functionality
+    validations:
+      required: true
+
+  - type: textarea
+    id: user-impact
+    attributes:
+      label: User Impact
+      description: How does the current issue affect users? Who benefits from this improvement?
+      placeholder: "Example: Users on slower devices experience long loading times and may leave before activities load"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: testing-requirements
+    attributes:
+      label: Testing Requirements
+      description: What testing should be done to verify the improvement?
+      options:
+        - label: Performance benchmarking before/after
+        - label: Load testing with many activities
+        - label: Mobile device testing
+        - label: Different browser testing
+        - label: Network speed testing (slow 3G, etc.)
+        - label: Automated performance monitoring
+        - label: User experience testing
+
+  - type: textarea
+    id: technical-constraints
+    attributes:
+      label: Technical Constraints
+      description: Any technical limitations or constraints to consider?
+      placeholder: |
+        Example:
+        - Must maintain backward compatibility
+        - Cannot change database schema
+        - Must work with existing hosting setup
+        - Budget constraints for external services
+        - Cannot break existing functionality
+
+  - type: textarea
+    id: monitoring-metrics
+    attributes:
+      label: Ongoing Monitoring
+      description: How should performance be monitored after implementation?
+      placeholder: "Example: Set up alerts for page load times over 3 seconds, monitor API response times"
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any other technical information or context
+      placeholder: "Include any relevant technical documentation, benchmarks, or background information"
