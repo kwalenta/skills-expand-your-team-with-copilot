@@ -10,6 +10,16 @@ Remember, it's self-paced so feel free to take a break! ☕️
 
 [![](https://img.shields.io/badge/Go%20to%20Exercise-%E2%86%92-1f883d?style=for-the-badge&logo=github&labelColor=197935)](https://github.com/kwalenta/skills-expand-your-team-with-copilot/issues/1)
 
+## 📝 Request Changes
+
+**Teachers and non-technical users**: Use our simple request forms to ask for changes without coding!
+
+[![Request Feature](https://img.shields.io/badge/Request%20Feature-🚀-blue?style=flat-square)](https://github.com/kwalenta/skills-expand-your-team-with-copilot/issues/new/choose) 
+[![Report Bug](https://img.shields.io/badge/Report%20Bug-🐛-red?style=flat-square)](https://github.com/kwalenta/skills-expand-your-team-with-copilot/issues/new/choose) 
+[![Update Content](https://img.shields.io/badge/Update%20Content-📝-green?style=flat-square)](https://github.com/kwalenta/skills-expand-your-team-with-copilot/issues/new/choose)
+
+👉 **[Quick Guide: How to Request Changes](docs/requesting-changes.md)**
+
 ---
 
 &copy; 2025 GitHub &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
