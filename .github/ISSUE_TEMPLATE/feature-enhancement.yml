@@ -1,0 +1,127 @@
+name: 🚀 Feature Enhancement Request
+description: Request a new feature or functionality for the Mergington High School Activities app
+title: "[FEATURE] "
+labels: ["enhancement", "needs-review"]
+assignees:
+  - copilot
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to request a new feature! This template will help provide all the details needed for implementation.
+        
+        **Please fill out all sections below to ensure your request can be implemented without additional clarification.**
+
+  - type: textarea
+    id: problem-description
+    attributes:
+      label: Problem or Need Description
+      description: What problem does this feature solve? What need does it address?
+      placeholder: "Example: Students have difficulty finding activities that meet on specific days of the week"
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-solution
+    attributes:
+      label: Proposed Solution
+      description: Describe what you want to happen. Be as specific as possible about the desired functionality.
+      placeholder: "Example: Add a calendar view that shows activities organized by day of the week with visual indicators for different categories"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: affected-area
+    attributes:
+      label: What area of the application does this affect?
+      description: Select the primary area where this change should be implemented
+      options:
+        - User Interface (Frontend - HTML/CSS/JavaScript)
+        - API/Backend (Python/FastAPI)
+        - Database/Data Structure
+        - User Authentication
+        - Activity Management
+        - Search and Filtering
+        - Not sure
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: user-types
+    attributes:
+      label: Who will benefit from this feature?
+      description: Select all user types that will benefit
+      options:
+        - label: Students browsing activities
+        - label: Students signing up for activities
+        - label: Teachers managing activities
+        - label: Administrators
+        - label: All users
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: Define specific, testable criteria that must be met for this feature to be considered complete
+      placeholder: |
+        Example:
+        - [ ] Calendar view displays activities organized by day of the week
+        - [ ] Each day shows activity name, time, and category
+        - [ ] Users can click on activities to view details and register
+        - [ ] Calendar view is responsive on mobile devices
+        - [ ] Filter options still work in calendar view
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority Level
+      description: How important is this feature?
+      options:
+        - Low - Nice to have
+        - Medium - Important for user experience  
+        - High - Critical functionality
+        - Urgent - Blocking other work
+    validations:
+      required: true
+
+  - type: textarea
+    id: technical-hints
+    attributes:
+      label: Technical Hints or Suggestions
+      description: Any specific technical approach, libraries, or implementation suggestions?
+      placeholder: "Example: Consider using a CSS Grid layout for the calendar, or add a new API endpoint for calendar data"
+
+  - type: textarea
+    id: mockups-examples
+    attributes:
+      label: Mockups, Examples, or References
+      description: Include any visual examples, links to similar features, or mockups
+      placeholder: "Attach images, provide links to similar implementations, or describe the visual design you have in mind"
+
+  - type: textarea
+    id: constraints
+    attributes:
+      label: Constraints and Limitations
+      description: Any constraints, limitations, or requirements to keep in mind?
+      placeholder: "Example: Must work on mobile devices, should not affect page load time, must maintain current color scheme"
+
+  - type: checkboxes
+    id: testing-requirements
+    attributes:
+      label: Testing Requirements
+      description: How should this feature be tested?
+      options:
+        - label: Manual testing is sufficient
+        - label: Needs automated tests
+        - label: Should be tested on mobile devices
+        - label: Needs accessibility testing
+        - label: Performance testing required
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any other information that might be helpful for implementation
+      placeholder: "Include any related issues, background information, or context that might help with implementation"

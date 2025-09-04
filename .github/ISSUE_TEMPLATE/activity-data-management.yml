@@ -1,0 +1,210 @@
+name: 📊 Activity & Data Management
+description: Request changes to activity data, management features, or administrative functionality
+title: "[DATA] "
+labels: ["data", "activities", "management", "needs-review"]
+assignees:
+  - copilot
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for requesting activity or data management improvements! This template will help implement the administrative features you need.
+        
+        **Please describe the data or management functionality you need.**
+
+  - type: dropdown
+    id: request-type
+    attributes:
+      label: Type of Request
+      description: What type of activity or data management feature do you need?
+      options:
+        - Add new activities to the system
+        - Modify existing activity information
+        - Activity capacity and registration limits
+        - Teacher/admin management features
+        - Student data and registration management
+        - Activity scheduling and time management
+        - Category and organization changes
+        - Reporting and analytics features
+        - Data export/import functionality
+        - Activity approval workflows
+        - Other management feature
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-situation
+    attributes:
+      label: Current Situation
+      description: Describe the current state of activity or data management
+      placeholder: "Example: Currently, all activities are hard-coded in the system and teachers cannot add new activities without developer intervention"
+    validations:
+      required: true
+
+  - type: textarea
+    id: desired-functionality
+    attributes:
+      label: Desired Functionality
+      description: Describe exactly what management features or data changes you need
+      placeholder: "Example: Teachers should be able to log in and create new activities, set capacity limits, and view registration lists"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: activity-fields
+    attributes:
+      label: Activity Information Fields
+      description: Which activity fields need to be managed or modified?
+      options:
+        - label: Activity name/title
+        - label: Description
+        - label: Category (Sports, Arts, Academic, etc.)
+        - label: Meeting days and times
+        - label: Location/room
+        - label: Teacher/advisor name
+        - label: Maximum capacity/enrollment
+        - label: Prerequisites or requirements
+        - label: Contact information
+        - label: Activity status (active/inactive)
+
+  - type: textarea
+    id: specific-activities
+    attributes:
+      label: Specific Activities or Data
+      description: List specific activities to add/modify or provide the data needed
+      placeholder: |
+        Example:
+        - Add "Robotics Club" - Tuesdays 3:30-5:00 PM, Room 204, Max 15 students
+        - Update "Drama Club" capacity from 20 to 25 students  
+        - Change "Chess Club" meeting time from Mondays to Wednesdays
+        - Add new category "STEM" for science activities
+
+  - type: dropdown
+    id: user-permissions
+    attributes:
+      label: Who should be able to manage this data?
+      description: Select the appropriate permission level for this functionality
+      options:
+        - Only administrators/developers
+        - Teachers and administrators
+        - Activity advisors for their own activities
+        - All logged-in users
+        - Students (view only)
+        - Public (no login required)
+    validations:
+      required: true
+
+  - type: textarea
+    id: workflow-requirements
+    attributes:
+      label: Workflow and Process Requirements
+      description: Describe any approval processes, validation rules, or workflow steps needed
+      placeholder: |
+        Example:
+        - New activities must be approved by administration before appearing
+        - Teachers can only edit activities they supervise
+        - Activity changes during registration period require special approval
+        - Send email notifications when activities are modified
+
+  - type: textarea
+    id: data-validation
+    attributes:
+      label: Data Validation Rules
+      description: What validation or business rules should be enforced?
+      placeholder: |
+        Example:
+        - Activity capacity must be between 5 and 50 students
+        - Meeting times cannot conflict with school hours
+        - Each activity must have at least one supervising teacher
+        - Activity names must be unique
+        - Required fields: name, category, meeting time, advisor
+
+  - type: checkboxes
+    id: management-features
+    attributes:
+      label: Management Features Needed
+      description: Select all management capabilities required
+      options:
+        - label: Add new activities
+        - label: Edit existing activities
+        - label: Delete/disable activities
+        - label: View registration lists
+        - label: Manage student enrollment
+        - label: Send notifications to participants
+        - label: Export data to spreadsheets
+        - label: Generate reports
+        - label: Bulk operations (add/update multiple activities)
+        - label: Activity scheduling conflicts detection
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: Define specific criteria that must be met
+      placeholder: |
+        Example:
+        - [ ] Teachers can log in and access activity management
+        - [ ] New activities can be created with all required fields
+        - [ ] Activity capacity limits are enforced during registration
+        - [ ] Registration lists are viewable by activity advisors
+        - [ ] Email notifications sent when activities are updated
+        - [ ] Changes are saved immediately and reflected on public site
+    validations:
+      required: true
+
+  - type: dropdown
+    id: data-storage
+    attributes:
+      label: Data Storage Requirements
+      description: How should this data be stored and managed?
+      options:
+        - Use existing in-memory storage (temporary)
+        - Add simple file-based storage
+        - Implement database storage
+        - Use external service (specify in context)
+        - Not sure - recommend best approach
+    validations:
+      required: true
+
+  - type: textarea
+    id: integration-requirements
+    attributes:
+      label: Integration Requirements
+      description: Does this need to integrate with any existing systems?
+      placeholder: "Example: Should sync with school's student information system, connect to email system for notifications"
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority Level
+      description: How important is this management functionality?
+      options:
+        - Low - Nice to have for future
+        - Medium - Needed for better operations
+        - High - Critical for daily management
+        - Urgent - Blocking current work
+    validations:
+      required: true
+
+  - type: textarea
+    id: user-impact
+    attributes:
+      label: User Impact and Benefits
+      description: How will this benefit teachers, students, or administrators?
+      placeholder: "Example: Teachers can quickly update activity information without waiting for technical support, students see more accurate and current information"
+    validations:
+      required: true
+
+  - type: textarea
+    id: security-considerations
+    attributes:
+      label: Security and Privacy Considerations
+      description: Any security or privacy requirements for managing student/activity data?
+      placeholder: "Example: Only show student names to activity advisors, require secure login for data access, comply with student privacy regulations"
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any other information about the data or management requirements
+      placeholder: "Include any existing processes, deadlines, or background information that affects the implementation"

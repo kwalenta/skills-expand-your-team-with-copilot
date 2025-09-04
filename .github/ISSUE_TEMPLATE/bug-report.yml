@@ -1,0 +1,178 @@
+name: 🐛 Bug Report
+description: Report a bug or issue with the Mergington High School Activities app
+title: "[BUG] "
+labels: ["bug", "needs-investigation"]
+assignees:
+  - copilot
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug! This information will help identify and fix the issue quickly.
+        
+        **Please provide as much detail as possible about the problem you encountered.**
+
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: Bug Description
+      description: A clear and concise description of what the bug is
+      placeholder: "Example: When I click the 'Register' button for Drama Club, nothing happens and no error message is shown"
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: Steps to Reproduce
+      description: Detailed steps to reproduce the behavior
+      placeholder: |
+        Example:
+        1. Go to the main activities page
+        2. Search for 'Drama Club'  
+        3. Click the 'Register' button on Drama Club
+        4. Fill in email address 'student@mergington.edu'
+        5. Click 'Register' in the modal
+        6. See error/nothing happens
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected Behavior
+      description: What should happen instead?
+      placeholder: "Example: After clicking 'Register', I should see a success message and my name should appear in the participants list"
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual-behavior
+    attributes:
+      label: Actual Behavior
+      description: What actually happens?
+      placeholder: "Example: The modal closes but no confirmation appears, and I'm not registered for the activity"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: bug-severity
+    attributes:
+      label: Severity Level
+      description: How severe is this bug?
+      options:
+        - Low - Minor inconvenience
+        - Medium - Affects functionality but has workaround
+        - High - Blocks important functionality
+        - Critical - Application is unusable
+    validations:
+      required: true
+
+  - type: dropdown
+    id: affected-area
+    attributes:
+      label: Which part of the application is affected?
+      description: Select the area where the bug occurs
+      options:
+        - User registration/signup
+        - Activity browsing/viewing
+        - Search functionality
+        - Filtering activities
+        - Login/authentication
+        - User interface/display
+        - Mobile responsiveness
+        - API/backend functionality
+        - Database operations
+        - Not sure
+    validations:
+      required: true
+
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: How often does this bug occur?
+      description: Frequency of the issue
+      options:
+        - Always (every time)
+        - Often (most of the time)
+        - Sometimes (occasionally)
+        - Rarely (once or twice)
+        - Only once
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: affected-browsers
+    attributes:
+      label: Which browsers have you tested?
+      description: Select all browsers where you've observed this issue
+      options:
+        - label: Chrome
+        - label: Firefox
+        - label: Safari
+        - label: Edge
+        - label: Mobile browser (specify in additional info)
+        - label: Other (specify in additional info)
+
+  - type: dropdown
+    id: device-type
+    attributes:
+      label: Device Type
+      description: What type of device are you using?
+      options:
+        - Desktop/Laptop
+        - Mobile phone
+        - Tablet
+        - Multiple devices (affects all)
+    validations:
+      required: true
+
+  - type: textarea
+    id: error-messages
+    attributes:
+      label: Error Messages or Console Output
+      description: Any error messages shown on screen or in browser console (F12)
+      placeholder: "Paste any error messages, console errors, or debugging information here"
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots or Screen Recordings
+      description: If applicable, describe what screenshots or recordings show the issue
+      placeholder: "Describe any visual evidence of the bug, or mention if you have screenshots to attach"
+
+  - type: textarea
+    id: workaround
+    attributes:
+      label: Workaround (if any)
+      description: Is there any way to work around this issue?
+      placeholder: "Example: Refreshing the page allows registration to work, or using a different browser"
+
+  - type: textarea
+    id: user-impact
+    attributes:
+      label: User Impact
+      description: How does this bug affect users?
+      placeholder: "Example: Students cannot register for activities, teachers cannot see who signed up"
+    validations:
+      required: true
+
+  - type: textarea
+    id: technical-details
+    attributes:
+      label: Technical Details
+      description: Any technical information that might help with debugging
+      placeholder: |
+        Example:
+        - Browser version: Chrome 91.0.4472.124
+        - Operating System: Windows 10
+        - Screen resolution: 1920x1080
+        - Network connection: WiFi
+        - Any browser extensions that might interfere
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any other context or information about the problem
+      placeholder: "Include any relevant background information, related issues, or context that might help with diagnosis"
